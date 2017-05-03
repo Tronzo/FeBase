@@ -1,5 +1,7 @@
 # 前端基础知识整理 2017-5-3
-摘自 bryant1410的https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers  根据自身稍作补充作为记忆文档
+摘自 bryant1410的https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers  
+根据自身稍作补充作为记忆文档
+
 web基础：
 ```
 HTML&CSS： 
