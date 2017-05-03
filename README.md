@@ -1,4 +1,5 @@
 # 前端基础知识整理 2017-5-3
+摘自 bryant1410的https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers  根据自身稍作补充作为记忆文档
 web基础：
 ```
 HTML&CSS： 
@@ -18,7 +19,21 @@ JavaScript：
 ```
 
 ## HTML
+* 什么是HTML
+```
+HTML 是用来描述网页的一种语言。
 
+HTML 指的是超文本标记语言 (Hyper Text Markup Language)
+HTML 不是一种编程语言，而是一种标记语言 (markup language)
+标记语言是一套标记标签 (markup tag)
+HTML 使用标记标签来描述网页
+```
+* HTML 文档 = 网页
+```
+HTML 文档描述网页
+HTML 文档包含 HTML 标签和纯文本
+HTML 文档也被称为网页
+```
 * Doctype作用？标准模式与兼容模式各有什么区别?
 ```
 （1）、<!DOCTYPE>声明位于位于HTML文档中的第一行，处于 <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
