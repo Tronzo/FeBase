@@ -18,4 +18,5 @@ JavaScript：
 ```
 
 ##HTML
-[id]： Doctype作用？标准模式与兼容模式各有什么区别?
+
+* Doctype作用？标准模式与兼容模式各有什么区别?
