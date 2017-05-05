@@ -147,6 +147,133 @@ Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
 
 [HTML5 离线缓存-manifest简介](http://yanhaijing.com/html/2014/12/28/html5-manifest)
 
+[有趣的HTML5：离线存储](https://segmentfault.com/a/1190000000732617)
+
+* 浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？
+```
+在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
+  离线的情况下，浏览器就直接使用离线存储的资源。
+```
+* 请描述一下 cookies，sessionStorage 和 localStorage 的区别？
+```
+cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
+cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+
+存储大小：
+cookie数据大小不能超过4k。
+sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
+
+有期时间：
+localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
+sessionStorage  数据在当前浏览器窗口关闭后自动删除。
+cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+```
+* iframe有那些缺点？
+```
+*iframe会阻塞主页面的Onload事件；
+*搜索引擎的检索程序无法解读这种页面，不利于SEO;
+
+*iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+动态给iframe添加src属性值，这样可以绕开以上两个问题。
+```
+* Label的作用是什么？是怎么用的？
+```
+label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+
+<label for="Name">Number:</label>
+<input type=“text“name="Name" id="Name"/>
+
+<label>Date:<input type="text" name="B"/></label>
+```
+* HTML5的form如何关闭自动完成功能？
+```
+给不想要提示的 form 或某个 input 设置为 autocomplete=off。
+```
+* 如何实现浏览器内多个标签页之间的通信? (阿里)
+```
+WebSocket、SharedWorker；
+也可以调用localstorge、cookies等本地存储方式；
+
+localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，
+我们通过监听事件，控制它的值来进行页面信息通信；
+注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
+```
+* webSocket如何兼容低浏览器？(阿里)
+```
+Adobe Flash Socket 、
+ActiveX HTMLFile (IE) 、
+基于 multipart 编码发送 XHR 、
+基于长轮询的 XHR
+```
+* 页面可见性（Page Visibility API） 可以有哪些用途？
+```
+通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
+在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+```
+* 如何在页面上实现一个圆形的可点击区域？
+```
+1、map+area或者svg
+2、border-radius
+3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+```
+* 实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。
+```
+<div style="height:1px;overflow:hidden;background:red"></div>
+```
+* 网页验证码是干嘛的，是为了解决什么安全问题。
+```
+区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水；
+有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。
+```
+* title与h1的区别、b与strong的区别、i与em的区别？
+```
+title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；
+
+strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：<strong>会重读，而<B>是展示强调内容。
+
+i内容展示为斜体，em表示强调的文本；
+
+Physical Style Elements -- 自然样式标签
+b, i, u, s, pre
+Semantic Style Elements -- 语义样式标签
+strong, em, ins, del, code
+应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。
+```
+## CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
