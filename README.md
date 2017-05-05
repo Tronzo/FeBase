@@ -143,7 +143,18 @@ Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
   	/ /offline.html
   3、在离线状态时，操作window.applicationCache进行需求实现。
 ```
-  
+详细的使用请参考：
+
+[HTML5 离线缓存-manifest简介](http://yanhaijing.com/html/2014/12/28/html5-manifest)
+
+
+
+
+
+
+
+
+
   
   
   
