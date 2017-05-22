@@ -593,7 +593,7 @@ strong, em, ins, del, code
 ```
 外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。
 合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
-w3school介绍网址： [http://www.w3school.com.cn/css/css_margin_collapsing.asp](http://www.w3school.com.cn/css/css_margin_collapsing.asp)
+w3school介绍网址： [http://www.w3school.com.cn/css/css_margin_collapsing.asp]('http://www.w3school.com.cn/css/css_margin_collapsing.asp')
 ```
 * zoom:1的清除浮动原理?
 ```
@@ -609,9 +609,15 @@ w3school介绍网址： [http://www.w3school.com.cn/css/css_margin_collapsing.as
 	目前非ie由于不支持这个属性，它们又是通过什么属性来实现元素的缩放呢？
 	可以通过css3里面的动画属性scale进行缩放。
 ```
+* 移动端的布局用过媒体查询吗？
+假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来， 而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS就是为文档提供在不同媒介上展示的适配方法
 
+当媒体查询为真时，相关的样式表或样式规则会按照正常的级联规被应用。 当媒体查询返回假， 标签上带有媒体查询的样式表 仍将被下载 （只不过不会被应用）。
 
-
+包含了一个媒体类型和至少一个使用 宽度、高度和颜色等媒体属性来限制样式表范围的表达式。 CSS3加入的媒体查询使得无需修改内容便可以使样式应用于某些特定的设备范围。
+```css
+<style> @media (min-width: 700px) and (orientation: landscape){ .sidebar { display: none; } } </style>
+```
 
 
 
