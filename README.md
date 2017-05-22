@@ -243,6 +243,13 @@ strong, em, ins, del, code
 应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。
 ```
 ## CSS
+* 介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？
+```
+（1）有两种， IE 盒子模型、W3C 盒子模型；
+（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；
+（3）区  别： IE的content部分把 border 和 padding计算了进去;
+```
+* CSS选择符有哪些？哪些属性可以继承？
 ```
 *   1.id选择器（ # myid）
     2.类选择器（.myclassname）
@@ -258,35 +265,101 @@ strong, em, ins, del, code
 
 *   不可继承的样式：border padding margin width height ;
 ```
+* CSS优先级算法如何计算？
+```
+*   优先级就近原则，同权重情况下样式定义最近者为准;
+*   载入样式以最后载入的定位为准;
 
+优先级为:
+ 同权重: 内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
+ !important >  id > class > tag
+ important 比 内联优先级高
+```
+* CSS3新增伪类有那些？
+```
+举例：
+  	p:first-of-type	选择属于其父元素的首个 <p> 元素的每个 <p> 元素。
+  	p:last-of-type	选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+        p:only-of-type	选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+  	p:only-child	选择属于其父元素的唯一子元素的每个 <p> 元素。
+  	p:nth-child(2)	选择属于其父元素的第二个子元素的每个 <p> 元素。
 
+  	:after		在元素之前添加内容,也可以用来做清除浮动。
+  	:before		在元素之后添加内容
+        :enabled  	
+  	:disabled 	控制表单控件的禁用状态。
+  	:checked        单选框或复选框被选中。
+```
+* 如何居中div？
+	** 水平居中：给div设置一个宽度，然后添加margin:0 auto属性
+	```css
+	div{
+		width:200px;
+		margin:0 auto;
+	  }
+	```
+	** 让绝对定位的div居中
+	```css
+	div {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: pink;	/* 方便看效果 */
+	 }
+	 ```
+	 ** 水平垂直居中一
+	 ```css
+	 确定容器的宽高 宽500 高 300 的层
+	 设置层的外边距
 
+	 div {
+		position: relative;		/* 相对定位或绝对定位均可 */
+		width:500px;
+		height:300px;
+		top: 50%;
+		left: 50%;
+		margin: -150px 0 0 -250px;     	/* 外边距为自身宽高的一半 */
+		background-color: pink;	 	/* 方便看效果 */
 
+	  }
+	  ```
+	  ** 水平垂直居中二
+	  ```css
+	  未知容器的宽高，利用 `transform` 属性
 
+	  div {
+		position: absolute;		/* 相对定位或绝对定位均可 */
+		width:500px;
+		height:300px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: pink;	 	/* 方便看效果 */
 
+	  }
+	  ```
+	  ** 水平垂直居中三
+	  ```css
+	  利用 flex 布局
+	  实际使用时应考虑兼容性
 
+	  .container {
+		display: flex;
+		align-items: center; 		/* 垂直居中 */
+		justify-content: center;	/* 水平居中 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	  }
+	  .container div {
+		width: 100px;
+		height: 100px;
+		background-color: pink;		/* 方便看效果 */
+	  }
+	  ```
 
 
 
@@ -300,5 +373,3 @@ strong, em, ins, del, code
   
   
   
-
-
