@@ -593,8 +593,9 @@ strong, em, ins, del, code
 ```
 外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。
 合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
-w3school介绍网址： [http://www.w3school.com.cn/css/css_margin_collapsing.asp]('http://www.w3school.com.cn/css/css_margin_collapsing.asp')
 ```
+w3school介绍网址： [http://www.w3school.com.cn/css/css_margin_collapsing.asp](http://www.w3school.com.cn/css/css_margin_collapsing.asp)
+
 * zoom:1的清除浮动原理?
 ```
 	清除浮动，触发hasLayout；
