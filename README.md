@@ -291,14 +291,14 @@ strong, em, ins, del, code
   	:checked        单选框或复选框被选中。
 ```
 * 如何居中div？
-	** 水平居中：给div设置一个宽度，然后添加margin:0 auto属性
+	+ 水平居中：给div设置一个宽度，然后添加margin:0 auto属性
 	```css
 	div{
 		width:200px;
 		margin:0 auto;
 	  }
 	```
-	** 让绝对定位的div居中
+	* 让绝对定位的div居中
 	```css
 	div {
 		position: absolute;
@@ -312,7 +312,7 @@ strong, em, ins, del, code
 		background-color: pink;	/* 方便看效果 */
 	 }
 	 ```
-	 ** 水平垂直居中一
+	 * 水平垂直居中一
 	 ```css
 	 确定容器的宽高 宽500 高 300 的层
 	 设置层的外边距
@@ -328,7 +328,7 @@ strong, em, ins, del, code
 
 	  }
 	  ```
-	  ** 水平垂直居中二
+	  * 水平垂直居中二
 	  ```css
 	  未知容器的宽高，利用 `transform` 属性
 
@@ -343,7 +343,7 @@ strong, em, ins, del, code
 
 	  }
 	  ```
-	  ** 水平垂直居中三
+	  * 水平垂直居中三
 	  ```css
 	  利用 flex 布局
 	  实际使用时应考虑兼容性
