@@ -243,16 +243,16 @@ strong, em, ins, del, code
 应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。
 ```
 ## CSS
-```css
-* 1.id选择器（ # myid）
-  2.类选择器（.myclassname）
-  3.标签选择器（div, h1, p）
-  4.相邻选择器（h1 + p）
-  5.子选择器（ul > li）
-  6.后代选择器（li a）
-  7.通配符选择器（ * ）
-  8.属性选择器（a[rel = "external"]）
-  9.伪类选择器（a:hover, li:nth-child）
+```
+*   1.id选择器（ # myid）
+    2.类选择器（.myclassname）
+    3.标签选择器（div, h1, p）
+    4.相邻选择器（h1 + p）
+    5.子选择器（ul > li）
+    6.后代选择器（li a）
+    7.通配符选择器（ * ）
+    8.属性选择器（a[rel = "external"]）
+    9.伪类选择器（a:hover, li:nth-child）
 
 *   可继承的样式： font-size font-family color, UL LI DL DD DT;
 
